@@ -1,0 +1,14 @@
+{
+  "name": "Deployer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/AnthonyPorthouse/Deployer",
+  "authors": [
+    "Anthony Porthouse <anthony@porthou.se>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "react": "~0.13.1"
+  }
+}
