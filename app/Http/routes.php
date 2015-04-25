@@ -16,3 +16,4 @@ Route::get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 Route::get('redirect', ['as' => 'redirect', 'uses' => 'AuthController@githubLogin']);
 Route::get('login', ['as' => 'login', 'uses' => 'AuthController@auth']);
+Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
