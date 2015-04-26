@@ -32,11 +32,18 @@ $route->group([], function ($route) {
     ]);
 });
 
-$route->get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
+// Authenticated User Routes
+$route->group(['middleware' => 'auth'], function($route) {
+    $route->get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
 
-$route->group(['prefix' => 'repository'], function ($route) {
-    $route->get('add', [
-        'as' => 'repository.add',
-        'uses' => 'RepositoryController@add',
-    ]);
+    $route->group(['prefix' => 'repository'], function ($route) {
+        $route->get('add', [
+            'as' => 'repository.add',
+            'uses' => 'RepositoryController@getAdd',
+        ]);
+        $route->put('add', [
+            'as' => 'repository.add',
+            'uses' => 'RepositoryController@putAdd',
+        ]);
+    });
 });

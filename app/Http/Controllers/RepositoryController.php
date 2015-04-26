@@ -4,11 +4,12 @@ namespace Deployer\Http\Controllers;
 
 use Deployer\Github\Api;
 use Deployer\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class RepositoryController extends Controller
 {
-    public function add()
+    public function getAdd()
     {
         // Get user token
         /** @var User $user */
@@ -25,5 +26,10 @@ class RepositoryController extends Controller
         return view('repositories.add')->with([
             'repositories' => $repositories,
         ]);
+    }
+
+    public function putAdd(Request $request)
+    {
+        dd($request->input());
     }
 }
