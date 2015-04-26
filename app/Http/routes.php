@@ -1,6 +1,6 @@
 <?php
 
-/** @var \Illuminate\Routing\Route $route */
+/** @var \Illuminate\Routing\Router $route */
 $route = Route::getFacadeRoot();
 /*
 |--------------------------------------------------------------------------
