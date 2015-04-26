@@ -137,6 +137,7 @@ return [
         'Illuminate\View\ViewServiceProvider',
         'Laravel\Socialite\SocialiteServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Barryvdh\Debugbar\ServiceProvider',
 
         /*
          * Application Service Providers...

@@ -8,7 +8,8 @@
 		"laravel/framework": "5.0.*",
 		"laravel/envoy": "~1.0",
 		"laravel/socialite": "~2.0",
-		"rhumsaa/uuid": "~2.8"
+		"rhumsaa/uuid": "~2.8",
+		"barryvdh/laravel-debugbar": "~2.0"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
