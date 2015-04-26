@@ -1,49 +1,49 @@
 <html>
-	<head>
-		<title>Laravel</title>
+    <head>
+        <title>{{ trans ('app.name') }}</title>
 
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                color: #B0BEC5;
+                display: table;
+                font-weight: 100;
+                font-family: 'Lato';
+            }
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+            .container {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
+            .content {
+                text-align: center;
+                display: inline-block;
+            }
 
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
+            .title {
+                font-size: 96px;
+                margin-bottom: 40px;
+            }
 
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Deployer</div>
-				<div class="quote">Deploy your code, keep your sanity.</div>
+            .quote {
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="title">{{ trans('app.name') }}</div>
+                <div class="quote">{{ trans('app.tagline') }}</div>
                 <div class="login"><a href="{{ route('redirect') }}">Login With GitHub</a></div>
-			</div>
-		</div>
-	</body>
+            </div>
+        </div>
+    </body>
 </html>
