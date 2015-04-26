@@ -20,6 +20,7 @@ class CreateUserFromGithubHandler
      * Handle the command.
      *
      * @param CreateUserFromGithub $command
+     *
      * @return User
      */
     public function handle(CreateUserFromGithub $command)

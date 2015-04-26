@@ -1,5 +1,7 @@
 <?php
 
+/** @var \Illuminate\Routing\Route $route */
+$route = Route::getFacadeRoot();
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,9 +13,30 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
+// Landing Page
+$route->get('/', 'WelcomeController@index');
 
-Route::get('redirect', ['as' => 'redirect', 'uses' => 'AuthController@githubLogin']);
-Route::get('login', ['as' => 'login', 'uses' => 'AuthController@auth']);
-Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
+// Auth Routes
+$route->group([], function ($route) {
+    $route->get('redirect', [
+        'as' => 'redirect',
+        'uses' => 'AuthController@githubLogin',
+    ]);
+    $route->get('login', [
+        'as' => 'login',
+        'uses' => 'AuthController@auth',
+    ]);
+    $route->get('logout', [
+        'as' => 'logout',
+        'uses' => 'Auth\AuthController@getLogout',
+    ]);
+});
+
+$route->get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
+
+$route->group(['prefix' => 'repository'], function ($route) {
+    $route->get('add', [
+        'as' => 'repository.add',
+        'uses' => 'RepositoryController@add',
+    ]);
+});

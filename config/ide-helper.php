@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 return array(
 
@@ -44,7 +44,6 @@ return array(
         'app',
     ),
 
-
     /*
     |--------------------------------------------------------------------------
     | Extra classes
@@ -69,9 +68,9 @@ return array(
             'critical'  => 'Monolog\Logger::addCritical',
             'alert'     => 'Monolog\Logger::addAlert',
             'emergency' => 'Monolog\Logger::addEmergency',
-        )
+        ),
     ),
-    
+
     /*
     |--------------------------------------------------------------------------
     | Interface implementations
@@ -81,9 +80,9 @@ return array(
     | are detected by the helpers, others can be listed below.
     |
     */
-    
+
     'interfaces' => array(
         '\Illuminate\Contracts\Auth\Authenticatable' => config('auth.model', 'App\User'),
-    )
+    ),
 
 );

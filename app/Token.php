@@ -3,11 +3,9 @@
 namespace Deployer;
 
 /**
- * Class Token
+ * Class Token.
  *
  * @property User $user
- *
- * @package Deployer
  */
 class Token extends Model
 {
