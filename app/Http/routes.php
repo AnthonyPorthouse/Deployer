@@ -33,7 +33,7 @@ $route->group([], function ($route) {
 });
 
 // Authenticated User Routes
-$route->group(['middleware' => 'auth'], function($route) {
+$route->group(['middleware' => 'auth'], function ($route) {
     $route->get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
 
     $route->group(['prefix' => 'repository'], function ($route) {
