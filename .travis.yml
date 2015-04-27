@@ -12,6 +12,9 @@ matrix:
     - php: 7
     - php: hhvm
 
+before_install:
+  - composer self-update
+
 install:
   - travis_retry composer install --no-interaction --prefer-source
 
