@@ -42,7 +42,7 @@
             <div class="content">
                 <div class="title">{{ trans('app.name') }}</div>
                 <div class="quote">{{ trans('app.tagline') }}</div>
-                <div class="login"><a href="{{ route('redirect') }}">Login With GitHub</a></div>
+                <div class="login"><a href="{{ route('redirect') }}">{{ trans('auth.github_login') }}</a></div>
             </div>
         </div>
     </body>
